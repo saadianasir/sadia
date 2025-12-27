@@ -6,83 +6,88 @@
     <title>Document</title>
     <style>
         body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
   margin: 0;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #a7d88c;
+}
+
+/* HERO */
+.hero {
   text-align: center;
+  padding: 50px 20px;
 }
 
-/* Card */
-.card {
-  background: white;
-  max-width: 400px;
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 600px;
   margin: auto;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card h1 {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.card p {
+  color: #333;
   font-size: 14px;
-  color: #555;
 }
 
-.card button {
+.btn-dark {
+  margin: 20px 0;
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hero-img {
+  max-width: 350px;
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  display: block;
+}
+
+/* CTA CARD */
+.cta {
+  background: black;
+  color: white;
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cta img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.cta-text {
+  padding: 40px;
+}
+
+.cta-text h2 {
+  margin-top: 0;
+}
+
+.cta-text p {
+  color: #ccc;
+}
+
+.btn-outline {
   margin-top: 15px;
   padding: 10px 25px;
-  border: none;
-  border-radius: 20px;
-  background: #e6eef5;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 14px;
 }
-
-/* Expertise Section */
-.expertise {
-  max-width: 400px;
-  margin: 40px auto;
-  text-align: left;
-}
-
-.expertise h2 {
-  font-size: 22px;
-}
-
-.sub {
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.box {
-  background: #dcdcdc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.box h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.box p {
-  margin-top: 5px;
-  color: #555;
-  font-size: 14px;
-}
-
     </style>
 </head>
 <body>
@@ -91,39 +96,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HVAC Solutions</title>
+  <title>Brevo Section</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Main Card -->
-  <div class="card">
-    <h1>Efficient HVAC<br>Solutions</h1>
-
-    <img src="./images (1).jpg" alt="HVAC Machine">
+  <!-- Top Section -->
+  <section class="hero">
+    <h1>Ready to grow with Brevo?</h1>
 
     <p>
-      A leading HVAC construction company known for advanced technology
-      and energy efficiency in cooling and heating systems.
-      We prioritize client comfort while cutting down on utility costs.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     </p>
 
-    <button>Contact</button>
-  </div>
+    <button class="btn-dark">Sign up free</button>
 
-  <!-- Expertise Section -->
-  <section class="expertise">
-    <h2>Our Expertise</h2>
-    <p class="sub">State-of-the-Art Solutions</p>
-
-    <div class="box">
-      <h3>24/7 Emergency HVAC Service</h3>
-      <p>Energy-Efficient Systems</p>
+    <div class="hero-img">
+      <img src="./images.png" alt="">
     </div>
+  </section>
 
-    <div class="box">
-      <h3>Indoor Air Quality</h3>
-      <p>Optimizing Air Circulation</p>
+  <!-- Bottom Card -->
+  <section class="cta">
+    <img src="./laptop-with-sun-background_1232-429.avif" alt="">
+
+    <div class="cta-text">
+      <h2>Ready to grow with Brevo?</h2>
+      <p>
+        Get the tools you need to reach your customers and grow your business.
+      </p>
+      <button class="btn-outline">Learn More</button>
     </div>
   </section>
 
