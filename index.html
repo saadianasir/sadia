@@ -3,28 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
+    <title>Document</title>
     <style>
-        .card{
-            height: 400px;
-            width: 200px;
-            background-color: lightslategrey;
-            padding: 30px;
-        
-        }
-        .container{
-            height: 50px;
-            width: 150px;
-        }
+        body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card */
+.card {
+  background: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #e6eef5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Expertise Section */
+.expertise {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.expertise h2 {
+  font-size: 22px;
+}
+
+.sub {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.box {
+  background: #dcdcdc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.box h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.box p {
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
     </style>
 </head>
 <body>
-   <div class="container">
-     <div class="card">
-        <h3>Haider</h3>
-        <img src="./a54cf06951f0d050a7e30f767a7b52c7.jpg" alt="" width="150px" height="150px">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ea fugit consequuntur, modi maiores perspiciatis voluptas alias at exercitationem facere aliquid? Quibusdam quas reprehenderit nulla delectus molestias aperiam eveniet sed.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Card -->
+  <div class="card">
+    <h1>Efficient HVAC<br>Solutions</h1>
+
+    <img src="./images (1).jpg" alt="HVAC Machine">
+
+    <p>
+      A leading HVAC construction company known for advanced technology
+      and energy efficiency in cooling and heating systems.
+      We prioritize client comfort while cutting down on utility costs.
+    </p>
+
+    <button>Contact</button>
+  </div>
+
+  <!-- Expertise Section -->
+  <section class="expertise">
+    <h2>Our Expertise</h2>
+    <p class="sub">State-of-the-Art Solutions</p>
+
+    <div class="box">
+      <h3>24/7 Emergency HVAC Service</h3>
+      <p>Energy-Efficient Systems</p>
     </div>
-   </div>
+
+    <div class="box">
+      <h3>Indoor Air Quality</h3>
+      <p>Optimizing Air Circulation</p>
+    </div>
+  </section>
+
+</body>
+</html>
 </body>
 </html>
