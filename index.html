@@ -8,85 +8,141 @@
         body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #a7d88c;
+  background: #fff;
 }
 
-/* HERO */
-.hero {
+/* Section */
+.services {
   text-align: center;
   padding: 50px 20px;
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.top-title {
+  color: #7aa38e;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  color: #333;
-  font-size: 14px;
+.services h1 {
+  margin: 10px 0 40px;
 }
 
-.btn-dark {
-  margin: 20px 0;
-  padding: 12px 30px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-.hero-img {
-  max-width: 350px;
-  margin: 30px auto;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.hero-img img {
-  width: 100%;
-  display: block;
-}
-
-/* CTA CARD */
-.cta {
-  background: black;
-  color: white;
-  max-width: 800px;
-  margin: 50px auto;
+/* Layout */
+.service-container {
   display: flex;
-  border-radius: 20px;
-  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+  gap: 30px;
 }
 
-.cta img {
-  width: 50%;
-  object-fit: cover;
+/* Left Menu */
+.service-menu {
+  width: 30%;
 }
 
-.cta-text {
-  padding: 40px;
-}
-
-.cta-text h2 {
-  margin-top: 0;
-}
-
-.cta-text p {
-  color: #ccc;
-}
-
-.btn-outline {
-  margin-top: 15px;
-  padding: 10px 25px;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  border-radius: 25px;
+.service-menu button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: #f7f7f7;
+  text-align: left;
+  font-size: 16px;
   cursor: pointer;
+}
+
+.service-menu button.active {
+  background: #5f936e;
+  color: white;
+}
+
+/* Right Content */
+.service-content {
+  width: 70%;
+  text-align: left;
+}body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* Section */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.top-title {
+  color: #7aa38e;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.services h1 {
+  margin: 10px 0 40px;
+}
+
+/* Layout */
+.service-container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  gap: 30px;
+}
+
+/* Left Menu */
+.service-menu {
+  width: 30%;
+}
+
+.service-menu button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: #f7f7f7;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.service-menu button.active {
+  background: #5f936e;
+  color: white;
+}
+
+/* Right Content */
+.service-content {
+  width: 70%;
+  text-align: left;
+}
+
+.service-content img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.service-content h2 {
+  margin-top: 15px;
+}
+
+.service-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.service-content img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.service-content h2 {
+  margin-top: 15px;
+}
+
+.service-content p {
+  color: #666;
+  line-height: 1.6;
 }
     </style>
 </head>
@@ -95,38 +151,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brevo Section</title>
+  <title>Our Services</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Section -->
-  <section class="hero">
-    <h1>Ready to grow with Brevo?</h1>
+  <!-- Heading -->
+  <section class="services">
+    <small class="top-title">OUR SERVICES</small>
+    <h1>We Can Help You With This Situation</h1>
 
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    </p>
+    <div class="service-container">
 
-    <button class="btn-dark">Sign up free</button>
+      <!-- Left Menu -->
+      <div class="service-menu">
+        <button class="active">Relation Problem</button>
+        <button>Couples Counseling</button>
+        <button>Depression Treatment</button>
+        <button>Family Problem</button>
+        <button>Personal Problem</button>
+        <button>Business Problem</button>
+      </div>
 
-    <div class="hero-img">
-      <img src="./images.png" alt="">
-    </div>
-  </section>
+      <!-- Right Content -->
+      <div class="service-content">
+        <img src="./young-couple-together-autumn-park_1303-18005.avif" alt="" width="20px" height="300px">
 
-  <!-- Bottom Card -->
-  <section class="cta">
-    <img src="./laptop-with-sun-background_1232-429.avif" alt="">
+        <h2>Relation Problem</h2>
+        <p>
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean.
+        </p>
+      </div>
 
-    <div class="cta-text">
-      <h2>Ready to grow with Brevo?</h2>
-      <p>
-        Get the tools you need to reach your customers and grow your business.
-      </p>
-      <button class="btn-outline">Learn More</button>
     </div>
   </section>
 
