@@ -1,51 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        button {
-            cursor: pointer;
-            background-color: green;
-            color: white;
-            border: none;
-            padding: 10px;
-            position: relative;
-        }
+    <STYle>
+        * {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-        #list-of {
-            display: none;
-            background-color: whitesmoke;
-            box-shadow: 10px 10px 20px -18px rgba(0, 0, 0, 0.49);
-            width: 100px;
-            position: absolute;
-        }
+body {
+  background: rgb(249, 250, 249);
+  padding: 40px;
+}
 
-        .option-box {
-            background-color: rgb(18, 17, 3);
-            width: 100px;
-        }
-        .option-box:hover + #list-of{
-            display: block;
-        }
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-          
-              
-    </style>
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.form-section h3 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f2f2f2;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #6aa84f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5c9645;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+    </STYle>
 </head>
-
 <body>
-    <p> How to make dropdowns , means navbar hidden options</p>
-    <button class="option-box">click me </button>
-    <div id="list-of">
-        
-        <p>option no 1</p>
-        <p>option no 2</p>
-        <p>option no 3</p>
-    
-    </div>
-</body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <h2 class="title">Contact Form #08</h2>
+
+  <div class="contact-container">
+
+    <!-- Left side form -->
+    <div class="form-section">
+      <h3>Get in touch with us</h3>
+
+      <form>
+        <div class="grid-2">
+          <div>
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div>
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="Email">
+          </div>
+        </div>
+
+        <label>SUBJECT</label>
+        <input type="text" placeholder="Subject">
+
+        <label>MESSAGE</label>
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right side image -->
+    <div class="image-section">
+      <img src="./images.jpg" alt="">
+    </div>
+
+  </div>
+
+</body>
+</html>
+</body>
 </html>
