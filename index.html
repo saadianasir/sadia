@@ -1,148 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #container {
+            border: 2px solid black;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
-<style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
 
-body {
-  background: #000;
-}
-
-.exchange {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #5aa9ff, #4c6ef5);
-  padding: 60px 20px;
-  text-align: center;
-  color: #fff;
-  animation: fadeIn 1.2s ease;
-}
-
-.title {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-/* Grid */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.card {
-  background: #fff;
-  color: #333;
-  padding: 30px;
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: slideUp 1s ease forwards;
-}
-
-.card img {
-  width: 70px;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.bottom-text {
-  margin-top: 50px;
-  font-size: 20px;
-  animation: fadeIn 2s ease;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 14px 32px;
-  background: #2ecc71;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.btn:hover {
-  background: #27ae60;
-  transform: scale(1.1);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rule The Exchange</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<section class="exchange">
-  <h1 class="title">Rule The Exchange</h1>
-
-  <div class="cards">
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="">
-      <h3>Knowledge Base</h3>
-      <p>
-        Sharpen up your trading know-how with our comprehensive Knowledge Base
-        containing helpful instructions and tutorials.
-      </p>
+    <div class="container">
+        <h1>Efficient HVAC Solutions</h1>
+        <img src="./images.jpg" alt="">
+        <p>Discover our range of efficient HVAC solutions designed <br> to keep your space comfortable year-round.</p>
+        <button>Contact</button>
     </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="">
-      <h3>24/7 Support</h3>
-      <p>
-        We’re here for you when you need us with 24/7 Support via both live chat
-        and help desk.
-      </p>
-    </div>
-  </div>
-
-  <p class="bottom-text">You'll wonder how you ever lived without us</p>
-  <button class="btn">Get Started for Free</button>
-</section>
-
 </body>
-</html>
-</body>
+
 </html>
