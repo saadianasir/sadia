@@ -6,28 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 10px;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            text-align: center;
+        body {
+            background-color: gray;
+            padding: 30px;
         }
-        #container {
-            border: 2px solid black;
-            width: 400px;
-            margin: auto;
-            padding: 20px;
+
+        .container {
+            background-color: white;
+            padding: 30px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+        }
+
+        .card {
+            height: 140px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            transition: background 0.3s ease;
+        
+        }
+
+        .card span {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::before {
+            background: rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
 
 <body>
+    <!-- keyframe ,animation ,transform -->
+    <!-- circle ,square -->
+    <!-- Responsive (mobile ,tablet, desktop) -->
     <div class="container">
-        <h1>Efficient HVAC Solutions</h1>
-        <img src="./images.jpg" alt="">
-        <p>Discover our range of efficient HVAC solutions designed <br> to keep your space comfortable year-round.</p>
-        <button>Contact</button>
+        <h1>Explore the best of Pinterest</h1>
+        <h2>Browser by category</h2>
+        <div class="grid">
+            <div class="card"> <img src="./images.jpg" alt="">
+                <span>Art</span>
+            </div>
+            <div class="card"> <img src="./images (2).jpg" alt="">
+                <span>beauty</span>
+            </div>
+            <div class="card"> <img src="./images (1).jpg" alt="">
+                <span>animal</span>
+            </div>
+            <div class="card"> <img src="./images.jpg" alt="">
+                <span>Art</span>
+            </div>
+            <div class="card"> <img src="./images (2).jpg" alt="">
+                <span>beauty</span>
+            </div>
+            <div class="card"> <img src="./images (1).jpg" alt="">
+                <span>animal</span>
+            </div>
+            <div class="card"> <img src="./images.jpg" alt="">
+                <span>Art</span>
+            </div>
+            <div class="card"> <img src="./images (2).jpg" alt="">
+                <span>beauty</span>
+            </div>
+            <div class="card"> <img src="./images (1).jpg" alt="">
+                <span>animal</span>
+            </div>
+            <div class="card"> <img src="./images.jpg" alt="">
+                <span>Art</span>
+            </div>
+            <div class="card"> <img src="./images (2).jpg" alt="">
+                <span>beauty</span>
+            </div>
+            <div class="card"> <img src="./images (1).jpg" alt="">
+                <span>animal</span>
+            </div>
+        </div>
     </div>
 </body>
 
