@@ -6,111 +6,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background-color: gray;
-            padding: 30px;
-        }
-
-        .container {
-            background-color: white;
-            padding: 30px;
-        }
-
-        .grid {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-
-        }
-
-        .card {
-            height: 140px;
-            border-radius: 15px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.35);
-            transition: background 0.3s ease;
-        
-        }
-
-        .card span {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
+        header {
+            height: 60px;
+            background-color: #333;
             color: white;
-            font-size: 18px;
-            font-weight: bold;
-            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
+        .page-content {
+            height: calc(100vh - 60px);
+            background-color: #f4f4f4;
         }
 
-        .card:hover::before {
-            background: rgba(0, 0, 0, 0.15);
+        /* Implementing the layout using Css Grid */
+        .layout {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 60px;
+            height: calc(100vh - 60px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 70px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        footer {
+            height: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        aside {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        /* Converting the layout to responsive  */
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px auto auto 60px;
+            }
+        }
+
+        aside {
+            height: 150px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            animation: slideIn 2s ease-in-out infinite;
+        }
+
+        @keyframes move {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+        .rotate {
+            animation: move 2s ease-in-out infinite;
+        }
+        @keyframes rotate box{
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .zoom {
+            animation: zoomInOut 2s ease-in-out infinite;
+        }
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        
+        }
+        @keyframes rotate {
+            from {
+                transform: translateX(0) rotate(0deg);
+            }
+            to {
+                transform: translateX(100px) rotate(360deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- keyframe ,animation ,transform -->
-    <!-- circle ,square -->
-    <!-- Responsive (mobile ,tablet, desktop) -->
-    <div class="container">
-        <h1>Explore the best of Pinterest</h1>
-        <h2>Browser by category</h2>
-        <div class="grid">
-            <div class="card"> <img src="./images.jpg" alt="">
-                <span>Art</span>
-            </div>
-            <div class="card"> <img src="./images (2).jpg" alt="">
-                <span>beauty</span>
-            </div>
-            <div class="card"> <img src="./images (1).jpg" alt="">
-                <span>animal</span>
-            </div>
-            <div class="card"> <img src="./images.jpg" alt="">
-                <span>Art</span>
-            </div>
-            <div class="card"> <img src="./images (2).jpg" alt="">
-                <span>beauty</span>
-            </div>
-            <div class="card"> <img src="./images (1).jpg" alt="">
-                <span>animal</span>
-            </div>
-            <div class="card"> <img src="./images.jpg" alt="">
-                <span>Art</span>
-            </div>
-            <div class="card"> <img src="./images (2).jpg" alt="">
-                <span>beauty</span>
-            </div>
-            <div class="card"> <img src="./images (1).jpg" alt="">
-                <span>animal</span>
-            </div>
-            <div class="card"> <img src="./images.jpg" alt="">
-                <span>Art</span>
-            </div>
-            <div class="card"> <img src="./images (2).jpg" alt="">
-                <span>beauty</span>
-            </div>
-            <div class="card"> <img src="./images (1).jpg" alt="">
-                <span>animal</span>
-            </div>
-        </div>
+    <h1>What is calc() Why it is used</h1>
+    <p>The calc() function in CSS allows you to perform calculations when specifying CSS property values. It is
+        particularly useful for creating responsive designs where you want to dynamically calculate dimensions based on
+        other values.</p>
+    <h2>What is calc()</h2>
+    <p>The calc() function can be used to combine different units (like percentages, pixels, ems, etc.) and perform
+        basic arithmetic operations such as addition (+), subtraction (-), multiplication (*), and division (/). This
+        allows for more flexible and adaptive layouts.</p>
+    <h4>Example:</h4>
+    property: calc(100% - 50px);
+    <h2>Why it is used</h2>
+    <p>Calc() is used to create layouts that adapt to different screen sizes and resolutions. It allows developers to
+        define sizes and positions in a way that can respond to changes in the viewport or other elements on the page.
+        This is especially useful for responsive web design, where elements need to adjust based on the size of the
+        screen.</p>
+    <h4>Example:</h4>
+    .container {
+    width: calc(100% - 20px);
+    padding: 10px;
+    }
+    <h2>How to use calc() with height</h2>
+    <p>You can use calc() to set the height of an element based on other elements or viewport dimensions. For example,
+        you might want an element to take up the full height of the viewport minus a fixed header height.</p>
+    <h4>Example:</h4>
+    .full-height-minus-header {
+    height: calc(100vh - 60px); /* 100% of viewport height minus 60px for header */
+    }
+    <h2>Complete Example</h2>
+    <header>Header</header>
+    <section class="page-content">content</section>
+    <h1>Creating a basic layout with calc()</h1>
+    <p>In this example, we create a simple layout with a header and a content section. The content section's height is
+        calculated to fill the remaining space in the viewport after accounting for the header's height.</p>
+    <ul>
+        <li>header</li>
+        <li>sidebar</li>
+        <li>main content</li>
+        <li>footer</li>
+    </ul>
+    <header>Header</header>
+    <div class="layout">
+        <aside>sidebar</aside>
+        <main>Main content</main>
     </div>
-</body>
+    <footer>Footer</footer>
+    <br>
+    <h1>What is keyframes</h1>
+    <p>Keyframes in CSS are used to define the intermediate steps in a CSS animation. They allow you to specify the
+        styles an element should have at various points during the animation sequence. By using keyframes, you can
+        create complex animations that change properties such as position, size, color, and more over time.</p>
+    <h2>How to use keyframes</h2>
+    <p>To create an animation using keyframes, you first define the keyframes using the @keyframes rule, specifying the
+        name of the animation and the styles at different percentages of the animation duration. Then, you apply the
+        animation to an element using the animation property.</p>
+    <h4>Example:</h4>
+    @keyframes slideIn {
+    0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+    }
+    <h2>Creat basic animation using keyframes</h2>
+    <div class="box"></div>
+<h1>Apply animation on elements</h1>
+<div class="box rotate"></div>
+<h1>Zoom in and out</h1>
+<div class="box zoom"></div>
+<h1>Rotate</h1>
+<div class="box rotate"></div>
+<h1>What media Queries are</h1>
+<p>Media queries are a fundamental part of responsive web design, allowing developers to apply different styles to a
+    webpage based on the characteristics of the device or viewport being used to view it. This enables the creation of
+    layouts that adapt seamlessly to various screen sizes, orientations, and resolutions, enhancing the user experience
+    across a wide range of devices.</p>
+<h2>How media Queries work</h2>
+<p>Media queries work by using the @media rule in CSS, which allows you to specify conditions under which certain
+    styles should be applied. These conditions can include factors such as screen width, height, resolution, orientation,
+    and more. When the conditions of a media query are met, the associated CSS rules are applied to the webpage.</p>
+    <h2>Why media queries are important</h2>
+    <p>Media queries are important because they enable responsive web design, which is essential in today's multi-device
+        world. With the increasing variety of devices used to access the internet, from smartphones and tablets to laptops
+        and desktops, it's crucial to ensure that websites look and function well on all screen sizes. Media queries help achieve this by allowing developers to tailor the user experience based on the specific device being used.</p>
+        <h3>Media queries for mobile devices</h3>
+        <p>only when screen width is 600px or less</p>
+        <h3>Media queries for desktop devices</h3>
+        <p>only when screen width is more than 600px</p>
+        <h3>Media queries for tablet devices</h3>
+        <p>only when screen width is between 600px and 1200px</p>
+        </body>
+        </html>
 
-</html>
+
+
+    
