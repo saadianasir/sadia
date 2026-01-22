@@ -5,223 +5,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        header {
-            height: 60px;
-            background-color: #333;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .page-content {
-            height: calc(100vh - 60px);
-            background-color: #f4f4f4;
-        }
-
-        /* Implementing the layout using Css Grid */
-        .layout {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            grid-template-rows: 60px 1fr 60px;
-            height: calc(100vh - 60px);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            height: 70px;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            line-height: 70px;
-        }
-
-        footer {
-            height: 50px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            line-height: 50px;
-        }
-
-        aside {
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        main {
-            background-color: #fff;
-            padding: 20px;
-        }
-
-        /* Converting the layout to responsive  */
-        @media (max-width: 768px) {
-            .layout {
-                grid-template-columns: 1fr;
-                grid-template-rows: 60px auto auto 60px;
-            }
-        }
-
-        aside {
-            height: 150px;
-        }
-
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: #4CAF50;
-            animation: slideIn 2s ease-in-out infinite;
-        }
-
-        @keyframes move {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-
-        }
-        .rotate {
-            animation: move 2s ease-in-out infinite;
-        }
-        @keyframes rotate box{
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .zoom {
-            animation: zoomInOut 2s ease-in-out infinite;
-        }
-        @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.5);
-            }
-            100% {
-                transform: scale(1);
-            }
-        
-        }
-        @keyframes rotate {
-            from {
-                transform: translateX(0) rotate(0deg);
-            }
-            to {
-                transform: translateX(100px) rotate(360deg);
-            }
-        }
-    </style>
 </head>
+<style>
+    body {
+        background-image: url(image.jpg);
+        width: 1440;
+        height: 4774;
+        opacity: 1;
+
+
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+        color: black
+    }
+
+    .text {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 100px;
+
+    }
+
+    .imge {
+        position: absolute;
+        top: 0;
+        left: 1200px;
+
+
+
+    }
+
+
+
+    .navbar {
+        padding: 20px 30px;
+        margin-left: 100px;
+
+
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 70px;
+        margin-top: 50px;
+        margin-left: 90px;
+
+    }
+
+    .nav-menu li {
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 1160.5799560546875;
+        height: 40;
+        top: 47px;
+        left: 140.92px;
+        border-width: 1px;
+
+
+    }
+
+    .travel {
+        float: right;
+        position: relative;
+        z-index: 1;
+        right: 220px;
+        top: -70px;
+    }
+
+    .container {
+        width: 630;
+        height: 535;
+        opacity: 1;
+        top: 217px;
+        left: 148px;
+
+    }
+
+    .bt {
+        width: 174px;
+        height: 48px;
+        background: orange;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        text-align: center;
+        height: 100hv;
+
+    }
+
+    .para {
+        color: red;
+    }
+
+    .logo {
+        position: absolute;
+        left: 100px;
+        top: 70px;
+        position: absolute;
+        right: 1200px;
+    }
+
+    .info {
+        text-align: center;
+        margin-top: 350px;
+        justify-content: space-between;
+        /* width: 547; */
+        /* height: 65; */
+        top: 1011px;
+
+
+
+
+
+    }
+
+    .class-container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .hh {
+        text-align: center;
+        margin-top: 100px;
+        font-size: 40px;
+    }
+
+    .info2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+
+    .p3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .i3 {
+        float: right;
+        margin-right: 220px;
+        margin-top: -150px;
+    }
+
+    .ef {
+        margin-left: 250px;
+        margin-top: 150px;
+    }
+
+    .text3 {
+        margin-left: 230px;
+        margin-top: 100px;
+        margin-bottom: -50px;
+    }
+</style>
 
 <body>
-    <h1>What is calc() Why it is used</h1>
-    <p>The calc() function in CSS allows you to perform calculations when specifying CSS property values. It is
-        particularly useful for creating responsive designs where you want to dynamically calculate dimensions based on
-        other values.</p>
-    <h2>What is calc()</h2>
-    <p>The calc() function can be used to combine different units (like percentages, pixels, ems, etc.) and perform
-        basic arithmetic operations such as addition (+), subtraction (-), multiplication (*), and division (/). This
-        allows for more flexible and adaptive layouts.</p>
-    <h4>Example:</h4>
-    property: calc(100% - 50px);
-    <h2>Why it is used</h2>
-    <p>Calc() is used to create layouts that adapt to different screen sizes and resolutions. It allows developers to
-        define sizes and positions in a way that can respond to changes in the viewport or other elements on the page.
-        This is especially useful for responsive web design, where elements need to adjust based on the size of the
-        screen.</p>
-    <h4>Example:</h4>
-    .container {
-    width: calc(100% - 20px);
-    padding: 10px;
-    }
-    <h2>How to use calc() with height</h2>
-    <p>You can use calc() to set the height of an element based on other elements or viewport dimensions. For example,
-        you might want an element to take up the full height of the viewport minus a fixed header height.</p>
-    <h4>Example:</h4>
-    .full-height-minus-header {
-    height: calc(100vh - 60px); /* 100% of viewport height minus 60px for header */
-    }
-    <h2>Complete Example</h2>
-    <header>Header</header>
-    <section class="page-content">content</section>
-    <h1>Creating a basic layout with calc()</h1>
-    <p>In this example, we create a simple layout with a header and a content section. The content section's height is
-        calculated to fill the remaining space in the viewport after accounting for the header's height.</p>
-    <ul>
-        <li>header</li>
-        <li>sidebar</li>
-        <li>main content</li>
-        <li>footer</li>
-    </ul>
-    <header>Header</header>
-    <div class="layout">
-        <aside>sidebar</aside>
-        <main>Main content</main>
+    <div id="hero">
+        <img src="./Decore.png" class="imge" alt="">
+        <nav class="navbar">
+            <img src="./Jadoo.png" alt="" width="60px" class="logo">
+            <ul class="nav-menu">
+
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Login</a></li>
+                <button class="btn">Sign Up</button>
+                <li><a href="#">EN</a></li>
+
+            </ul>
+
+
+        </nav>
+        <div class="container">
+            <img src="./Traveller 1.png" class="travel" alt="">
+            <div class="text">
+                <p class="para">Best Destinations around the world</p>
+                <h1>Travel, enjoy <br>
+                    and live a new <br>
+                    and full life</h1>
+                <p>Built Wicket longer admire do barton <br> vanity itself do in it. Preferred to sportsmen it engrossed
+                    <br>
+                    listening. Park gate sell they west hard for the.
+                </p>
+                <button class="bt">Find out more</button>
+            </div>
+        </div>
+        <div class="info">
+            <p>CATEGORY</p>
+            <h1>We Offer Best Services</h1>
+        </div>
+        <div class="class-container">
+            <div class="card"><img src="./Group 48.png" alt="">
+                <h4>Calculated Weather </h4>
+                <p>Built Wicket longer admire <br>do barton vanity itself do in it.</p>
+            </div>
+            <div class="card"><img src="./Category Active.png" alt=""></div>
+            <div class="card"><img src="./Group 50.png" alt="">
+                <h4>Local Events</h4>
+                <p>Barton vanity itself do in it. <br> Preferd to men it engrossed listening. </p>
+            </div>
+            <div class="card"><img src="./Group 49.png" alt="">
+                <h4>Customization</h4>
+                <p>We deliver outsourcedaviation <br> services formilitary customers</p>
+            </div>
+        </div>
+
+        <div class="hh">
+            <p>Top Selling</p>
+            <h2>Top Destinations</h2>
+        </div>
+        <div class="info2">
+
+            <div class="card2"><img src="./Rectangle 14.png" alt=""><img src="./card 2.png" alt="" class="p3"> </div>
+            <div class="card2"><img src="./Rectangle 14.jpg" alt=""><img src="./card 4.png" alt="" class="p3"></div>
+            <div class="card2"><img src="./Rectangle 14 (1).png" alt=""><img src="./card 5.png" alt="" class="p3"></div>
+        </div>
+        <div class="text3">
+            <p>Easy and Fast</p>
+            <h1>Book your next trip <br> In 3 easy steps</h1>
+        </div>
+        <img src="./Image.png" alt="" class="i3">
+        <div class="ef">
+            <img src="./Values.png" alt="">
+        </div>
+
+
+
     </div>
-    <footer>Footer</footer>
-    <br>
-    <h1>What is keyframes</h1>
-    <p>Keyframes in CSS are used to define the intermediate steps in a CSS animation. They allow you to specify the
-        styles an element should have at various points during the animation sequence. By using keyframes, you can
-        create complex animations that change properties such as position, size, color, and more over time.</p>
-    <h2>How to use keyframes</h2>
-    <p>To create an animation using keyframes, you first define the keyframes using the @keyframes rule, specifying the
-        name of the animation and the styles at different percentages of the animation duration. Then, you apply the
-        animation to an element using the animation property.</p>
-    <h4>Example:</h4>
-    @keyframes slideIn {
-    0% {
-    transform: translateX(-100%);
-    opacity: 0;
-    }
-    100% {
-    transform: translateX(0);
-    opacity: 1;
-    }
-    }
-    <h2>Creat basic animation using keyframes</h2>
-    <div class="box"></div>
-<h1>Apply animation on elements</h1>
-<div class="box rotate"></div>
-<h1>Zoom in and out</h1>
-<div class="box zoom"></div>
-<h1>Rotate</h1>
-<div class="box rotate"></div>
-<h1>What media Queries are</h1>
-<p>Media queries are a fundamental part of responsive web design, allowing developers to apply different styles to a
-    webpage based on the characteristics of the device or viewport being used to view it. This enables the creation of
-    layouts that adapt seamlessly to various screen sizes, orientations, and resolutions, enhancing the user experience
-    across a wide range of devices.</p>
-<h2>How media Queries work</h2>
-<p>Media queries work by using the @media rule in CSS, which allows you to specify conditions under which certain
-    styles should be applied. These conditions can include factors such as screen width, height, resolution, orientation,
-    and more. When the conditions of a media query are met, the associated CSS rules are applied to the webpage.</p>
-    <h2>Why media queries are important</h2>
-    <p>Media queries are important because they enable responsive web design, which is essential in today's multi-device
-        world. With the increasing variety of devices used to access the internet, from smartphones and tablets to laptops
-        and desktops, it's crucial to ensure that websites look and function well on all screen sizes. Media queries help achieve this by allowing developers to tailor the user experience based on the specific device being used.</p>
-        <h3>Media queries for mobile devices</h3>
-        <p>only when screen width is 600px or less</p>
-        <h3>Media queries for desktop devices</h3>
-        <p>only when screen width is more than 600px</p>
-        <h3>Media queries for tablet devices</h3>
-        <p>only when screen width is between 600px and 1200px</p>
-        </body>
-        </html>
+</body>
 
-
-
-    
+</html>
