@@ -1,260 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background:#0b7fc4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.container{
+  width:90%;
+  max-width:420px;
+  background:linear-gradient(180deg,#1da1e2,#0b7fc4);
+  border-radius:20px;
+  padding:24px;
+  color:#fff;
+}
+
+/* Badge */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.15);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:16px;
+}
+
+/* Heading */
+h1{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:14px;
+  opacity:0.9;
+  margin-bottom:20px;
+}
+
+/* Cards */
+.card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:rgba(255,255,255,0.15);
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:12px;
+}
+
+.icon-box{
+  width:48px;
+  height:48px;
+  background:#fff;
+  color:#0b7fc4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  font-size:20px;
+}
+
+.card h4{
+  font-size:12px;
+  opacity:0.8;
+}
+
+.card span{
+  font-size:14px;
+  font-weight:500;
+}
+
+/* Stats */
+.stats{
+  display:flex;
+  justify-content:space-between;
+  margin:20px 0;
+  text-align:center;
+}
+
+.stats div{
+  background:rgba(255,255,255,0.15);
+  padding:12px;
+  border-radius:12px;
+  width:30%;
+}
+
+.stats h2{
+  font-size:22px;
+}
+
+.stats p{
+  font-size:11px;
+  margin:0;
+}
+
+/* Social Icons */
+.social{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:10px;
+}
+
+.social i{
+  width:36px;
+  height:36px;
+  background:rgba(255,255,255,0.2);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.social i:hover{
+  background:#fff;
+  color:#0b7fc4;
+}
+    </style>
 </head>
-<style>
-    body {
-        background-image: url(image.jpg);
-        width: 1440;
-        height: 4774;
-        opacity: 1;
-
-
-    }
-
-    h1 {
-        font-size: 48px;
-        font-weight: bold;
-        line-height: 60px;
-        color: black
-    }
-
-    .text {
-        text-align: center;
-        font-size: 30px;
-        margin-top: 100px;
-
-    }
-
-    .imge {
-        position: absolute;
-        top: 0;
-        left: 1200px;
-
-
-
-    }
-
-
-
-    .navbar {
-        padding: 20px 30px;
-        margin-left: 100px;
-
-
-    }
-
-    .nav-menu {
-        list-style: none;
-        display: flex;
-        gap: 70px;
-        margin-top: 50px;
-        margin-left: 90px;
-
-    }
-
-    .nav-menu li {
-        position: relative;
-        width: 100%;
-    }
-
-    .nav-menu a {
-        color: black;
-        text-decoration: none;
-        font-size: 16px;
-        justify-content: center;
-    }
-
-    .btn {
-        width: 1160.5799560546875;
-        height: 40;
-        top: 47px;
-        left: 140.92px;
-        border-width: 1px;
-
-
-    }
-
-    .travel {
-        float: right;
-        position: relative;
-        z-index: 1;
-        right: 220px;
-        top: -70px;
-    }
-
-    .container {
-        width: 630;
-        height: 535;
-        opacity: 1;
-        top: 217px;
-        left: 148px;
-
-    }
-
-    .bt {
-        width: 174px;
-        height: 48px;
-        background: orange;
-        border-radius: 10px;
-        color: white;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        justify-content: center;
-        text-align: center;
-        height: 100hv;
-
-    }
-
-    .para {
-        color: red;
-    }
-
-    .logo {
-        position: absolute;
-        left: 100px;
-        top: 70px;
-        position: absolute;
-        right: 1200px;
-    }
-
-    .info {
-        text-align: center;
-        margin-top: 350px;
-        justify-content: space-between;
-        /* width: 547; */
-        /* height: 65; */
-        top: 1011px;
-
-
-
-
-
-    }
-
-    .class-container {
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    .hh {
-        text-align: center;
-        margin-top: 100px;
-        font-size: 40px;
-    }
-
-    .info2 {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-
-    .p3 {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .i3 {
-        float: right;
-        margin-right: 220px;
-        margin-top: -150px;
-    }
-
-    .ef {
-        margin-left: 250px;
-        margin-top: 150px;
-    }
-
-    .text3 {
-        margin-left: 230px;
-        margin-top: 100px;
-        margin-bottom: -50px;
-    }
-</style>
-
 <body>
-    <div id="hero">
-        <img src="./Decore.png" class="imge" alt="">
-        <nav class="navbar">
-            <img src="./Jadoo.png" alt="" width="60px" class="logo">
-            <ul class="nav-menu">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact UI</title>
 
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Hotels</a></li>
-                <li><a href="#">Flights</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">Login</a></li>
-                <button class="btn">Sign Up</button>
-                <li><a href="#">EN</a></li>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-            </ul>
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
 
-        </nav>
-        <div class="container">
-            <img src="./Traveller 1.png" class="travel" alt="">
-            <div class="text">
-                <p class="para">Best Destinations around the world</p>
-                <h1>Travel, enjoy <br>
-                    and live a new <br>
-                    and full life</h1>
-                <p>Built Wicket longer admire do barton <br> vanity itself do in it. Preferred to sportsmen it engrossed
-                    <br>
-                    listening. Park gate sell they west hard for the.
-                </p>
-                <button class="bt">Find out more</button>
-            </div>
-        </div>
-        <div class="info">
-            <p>CATEGORY</p>
-            <h1>We Offer Best Services</h1>
-        </div>
-        <div class="class-container">
-            <div class="card"><img src="./Group 48.png" alt="">
-                <h4>Calculated Weather </h4>
-                <p>Built Wicket longer admire <br>do barton vanity itself do in it.</p>
-            </div>
-            <div class="card"><img src="./Category Active.png" alt=""></div>
-            <div class="card"><img src="./Group 50.png" alt="">
-                <h4>Local Events</h4>
-                <p>Barton vanity itself do in it. <br> Preferd to men it engrossed listening. </p>
-            </div>
-            <div class="card"><img src="./Group 49.png" alt="">
-                <h4>Customization</h4>
-                <p>We deliver outsourcedaviation <br> services formilitary customers</p>
-            </div>
-        </div>
+  <div class="badge">
+    <i class="fa-solid fa-comment"></i>
+    GET IN TOUCH
+  </div>
 
-        <div class="hh">
-            <p>Top Selling</p>
-            <h2>Top Destinations</h2>
-        </div>
-        <div class="info2">
+  <h1>Let's Bring Your Vision to Life</h1>
+  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 
-            <div class="card2"><img src="./Rectangle 14.png" alt=""><img src="./card 2.png" alt="" class="p3"> </div>
-            <div class="card2"><img src="./Rectangle 14.jpg" alt=""><img src="./card 4.png" alt="" class="p3"></div>
-            <div class="card2"><img src="./Rectangle 14 (1).png" alt=""><img src="./card 5.png" alt="" class="p3"></div>
-        </div>
-        <div class="text3">
-            <p>Easy and Fast</p>
-            <h1>Book your next trip <br> In 3 easy steps</h1>
-        </div>
-        <img src="./Image.png" alt="" class="i3">
-        <div class="ef">
-            <img src="./Values.png" alt="">
-        </div>
-
-
-
+  <div class="card">
+    <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+    <div>
+      <h4>EMAIL US</h4>
+      <span>support@example.com</span>
     </div>
-</body>
+  </div>
 
-</html>
+  <div class="card">
+    <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+    <div>
+      <h4>CALL US</h4>
+      <span>+1 (555) 890-1234</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+    <div>
+      <h4>VISIT US</h4>
+      <span>1847 Oak Avenue, Portland</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div>
+      <h2>98%</h2>
+      <p>SATISFACTION</p>
+    </div>
+    <div>
+      <h2>24/7</h2>
+      <p>SUPPORT</p>
+    </div>
+    <div>
+      <h2>3.2k</h2>
+      <p>PROJECTS</p>
+    </div>
+  </div>
+
+  <div class="social">
+    <span>Follow Us</span>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-x-twitter"></i>
+    <i class="fab fa-linkedin-in"></i>
+    <i class="fab fa-instagram"></i>
+  </div>
+
+</div>
+
+</body>
+</html>  
