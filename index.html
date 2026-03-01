@@ -2,214 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web & Mobile Development - Batch 04</title>
     <style>
-        *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Poppins", sans-serif;
-}
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4e73df, #1cc88a);
+            margin: 0;
+            padding: 0;
+        }
 
-body{
-  background:#0b7fc4;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
+        .container{
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
 
-.container{
-  width:90%;
-  max-width:420px;
-  background:linear-gradient(180deg,#1da1e2,#0b7fc4);
-  border-radius:20px;
-  padding:24px;
-  color:#fff;
-}
+        h1{
+            text-align: center;
+            color: #4e73df;
+        }
 
-/* Badge */
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:rgba(255,255,255,0.15);
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:12px;
-  margin-bottom:16px;
-}
+        h2{
+            color: #1cc88a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
 
-/* Heading */
-h1{
-  font-size:24px;
-  margin-bottom:10px;
-}
+        ul{
+            line-height: 1.8;
+        }
 
-p{
-  font-size:14px;
-  opacity:0.9;
-  margin-bottom:20px;
-}
+        code{
+            background: #f8f9fc;
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #e74a3b;
+        }
 
-/* Cards */
-.card{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  background:rgba(255,255,255,0.15);
-  padding:14px;
-  border-radius:14px;
-  margin-bottom:12px;
-}
-
-.icon-box{
-  width:48px;
-  height:48px;
-  background:#fff;
-  color:#0b7fc4;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:12px;
-  font-size:20px;
-}
-
-.card h4{
-  font-size:12px;
-  opacity:0.8;
-}
-
-.card span{
-  font-size:14px;
-  font-weight:500;
-}
-
-/* Stats */
-.stats{
-  display:flex;
-  justify-content:space-between;
-  margin:20px 0;
-  text-align:center;
-}
-
-.stats div{
-  background:rgba(255,255,255,0.15);
-  padding:12px;
-  border-radius:12px;
-  width:30%;
-}
-
-.stats h2{
-  font-size:22px;
-}
-
-.stats p{
-  font-size:11px;
-  margin:0;
-}
-
-/* Social Icons */
-.social{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-top:10px;
-}
-
-.social i{
-  width:36px;
-  height:36px;
-  background:rgba(255,255,255,0.2);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.social i:hover{
-  background:#fff;
-  color:#0b7fc4;
-}
+        .box{
+            background: #f8f9fc;
+            padding: 15px;
+            border-left: 5px solid #4e73df;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
     </style>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact UI</title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+    <h1>Web & Mobile Development - Batch 04</h1>
 
-  <div class="badge">
-    <i class="fa-solid fa-comment"></i>
-    GET IN TOUCH
-  </div>
+    <h2>1. let and const</h2>
 
-  <h1>Let's Bring Your Vision to Life</h1>
-  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-
-  <div class="card">
-    <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
-    <div>
-      <h4>EMAIL US</h4>
-      <span>support@example.com</span>
+    <div class="box">
+        <h3>Difference between var, let, and const</h3>
+        <ul>
+            <li><code>var</code> → Function scoped and can be redeclared.</li>
+            <li><code>let</code> → Block scoped and cannot be redeclared in same block.</li>
+            <li><code>const</code> → Block scoped and value cannot be reassigned.</li>
+        </ul>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
-    <div>
-      <h4>CALL US</h4>
-      <span>+1 (555) 890-1234</span>
+    <div class="box">
+        <h3>When to use let</h3>
+        <p>
+            Use <code>let</code> when the value of a variable may change later.
+        </p>
+        <code>
+            let age = 18;<br>
+            age = 19;
+        </code>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-    <div>
-      <h4>VISIT US</h4>
-      <span>1847 Oak Avenue, Portland</span>
+    <div class="box">
+        <h3>Why const is important</h3>
+        <p>
+            <code>const</code> helps prevent accidental changes. It makes code safer and easier to understand.
+        </p>
+        <code>
+            const pi = 3.14;
+        </code>
     </div>
-  </div>
 
-  <div class="stats">
-    <div>
-      <h2>98%</h2>
-      <p>SATISFACTION</p>
-    </div>
-    <div>
-      <h2>24/7</h2>
-      <p>SUPPORT</p>
-    </div>
-    <div>
-      <h2>3.2k</h2>
-      <p>PROJECTS</p>
-    </div>
-  </div>
+    <h2>2. Data Types (Basic)</h2>
 
-  <div class="social">
-    <span>Follow Us</span>
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-x-twitter"></i>
-    <i class="fab fa-linkedin-in"></i>
-    <i class="fab fa-instagram"></i>
-  </div>
+    <div class="box">
+        <ul>
+            <li><b>String:</b> Text values. Example: <code>"Hello"</code></li>
+            <li><b>Number:</b> Numeric values. Example: <code>25</code></li>
+            <li><b>Boolean:</b> True or False values. Example: <code>true</code></li>
+            <li><b>Undefined:</b> Variable declared but no value assigned.</li>
+            <li><b>Null:</b> Empty value assigned intentionally.</li>
+            <li><b>Using typeof:</b> Used to check data type. Example: <code>typeof "Hello"</code></li>
+        </ul>
+    </div>
+
+    <h2>3. User Input</h2>
+
+    <div class="box">
+        <h3>prompt() basics</h3>
+        <p>
+            <code>prompt()</code> is used to take input from the user.
+        </p>
+        <code>
+            let name = prompt("Enter your name:");
+        </code>
+    </div>
+
+    <div class="box">
+        <h3>Getting input from the user</h3>
+        <p>
+            We can store user input inside a variable.
+        </p>
+    </div>
+
+    <div class="box">
+        <h3>Converting input to number</h3>
+        <p>
+            By default prompt returns string. Use <code>Number()</code> to convert.
+        </p>
+        <code>
+            let num = Number(prompt("Enter number:"));
+        </code>
+    </div>
 
 </div>
 
 </body>
-</html>  
+</html>
