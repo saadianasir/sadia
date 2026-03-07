@@ -1,134 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Web & Mobile Development - Batch 04</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4e73df, #1cc88a);
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<title>JavaScript Operators Tutorial</title>
 
-        .container{
-            width: 80%;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f6f8;
+margin:0;
+padding:20px;
+}
 
-        h1{
-            text-align: center;
-            color: #4e73df;
-        }
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
-        h2{
-            color: #1cc88a;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-        }
+h1{
+text-align:center;
+color:#333;
+}
 
-        ul{
-            line-height: 1.8;
-        }
+h2{
+color:#2c7be5;
+margin-top:25px;
+}
 
-        code{
-            background: #f8f9fc;
-            padding: 3px 6px;
-            border-radius: 4px;
-            color: #e74a3b;
-        }
+.code{
+background:#272822;
+color:#f8f8f2;
+padding:10px;
+border-radius:6px;
+margin-top:8px;
+font-family:monospace;
+}
 
-        .box{
-            background: #f8f9fc;
-            padding: 15px;
-            border-left: 5px solid #4e73df;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-    </style>
+.task{
+background:#eaf7ff;
+padding:10px;
+border-left:4px solid #2c7be5;
+margin-top:10px;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Web & Mobile Development - Batch 04</h1>
 
-    <h2>1. let and const</h2>
+<h1>JavaScript Operators and Conditions</h1>
+<p>Simple explanation for beginners.</p>
 
-    <div class="box">
-        <h3>Difference between var, let, and const</h3>
-        <ul>
-            <li><code>var</code> → Function scoped and can be redeclared.</li>
-            <li><code>let</code> → Block scoped and cannot be redeclared in same block.</li>
-            <li><code>const</code> → Block scoped and value cannot be reassigned.</li>
-        </ul>
-    </div>
+<h2>1. Arithmetic Operators</h2>
+<p>Used for math.</p>
 
-    <div class="box">
-        <h3>When to use let</h3>
-        <p>
-            Use <code>let</code> when the value of a variable may change later.
-        </p>
-        <code>
-            let age = 18;<br>
-            age = 19;
-        </code>
-    </div>
+<p>Operators: +  -  *  /  %</p>
 
-    <div class="box">
-        <h3>Why const is important</h3>
-        <p>
-            <code>const</code> helps prevent accidental changes. It makes code safer and easier to understand.
-        </p>
-        <code>
-            const pi = 3.14;
-        </code>
-    </div>
+<div class="code">
+let price = 100;
+let tax = 20;
+let total = price + tax;
 
-    <h2>2. Data Types (Basic)</h2>
+console.log(total);
+</div>
 
-    <div class="box">
-        <ul>
-            <li><b>String:</b> Text values. Example: <code>"Hello"</code></li>
-            <li><b>Number:</b> Numeric values. Example: <code>25</code></li>
-            <li><b>Boolean:</b> True or False values. Example: <code>true</code></li>
-            <li><b>Undefined:</b> Variable declared but no value assigned.</li>
-            <li><b>Null:</b> Empty value assigned intentionally.</li>
-            <li><b>Using typeof:</b> Used to check data type. Example: <code>typeof "Hello"</code></li>
-        </ul>
-    </div>
+<p>Example: Shopping bill.</p>
 
-    <h2>3. User Input</h2>
+<div class="task">
+Task: Create two numbers and multiply them.
+</div>
 
-    <div class="box">
-        <h3>prompt() basics</h3>
-        <p>
-            <code>prompt()</code> is used to take input from the user.
-        </p>
-        <code>
-            let name = prompt("Enter your name:");
-        </code>
-    </div>
 
-    <div class="box">
-        <h3>Getting input from the user</h3>
-        <p>
-            We can store user input inside a variable.
-        </p>
-    </div>
+<h2>2. Assignment Operators</h2>
+<p>Used to store values.</p>
 
-    <div class="box">
-        <h3>Converting input to number</h3>
-        <p>
-            By default prompt returns string. Use <code>Number()</code> to convert.
-        </p>
-        <code>
-            let num = Number(prompt("Enter number:"));
-        </code>
-    </div>
+<p>=  +=  -=</p>
+
+<div class="code">
+let score = 10;
+
+score += 5;
+
+console.log(score);
+</div>
+
+<p>Result becomes 15.</p>
+
+<div class="task">
+Task: Create a variable called money and add 50 to it.
+</div>
+
+
+<h2>3. Comparison Operators</h2>
+<p>Used to compare values.</p>
+
+<p>==  ===  !=  >  <  >=  <=</p>
+
+<h3>Difference between == and ===</h3>
+
+<p>== checks value only.</p>
+<p>=== checks value and type.</p>
+
+<div class="code">
+console.log(5 == "5"); 
+true
+
+console.log(5 === "5");
+false
+</div>
+
+<div class="task">
+Task: Compare 10 and "10" using == and ===.
+</div>
+
+
+<h2>4. Logical Operators</h2>
+<p>Used for multiple conditions.</p>
+
+<p>&& AND</p>
+<p>|| OR</p>
+<p>! NOT</p>
+
+<div class="code">
+let age = 20;
+
+if(age > 18 && age < 30){
+console.log("Young adult");
+}
+</div>
+
+<div class="task">
+Task: Check if number is greater than 10 AND less than 50.
+</div>
+
+
+<h2>5. Unary Operators</h2>
+<p>Works with one value.</p>
+
+<p>++ increase</p>
+<p>-- decrease</p>
+
+<div class="code">
+let likes = 5;
+
+likes++;
+
+console.log(likes);
+</div>
+
+<div class="task">
+Task: Create a variable and increase it using ++.
+</div>
+
+
+<h2>6. Ternary Operator</h2>
+<p>Short version of if else.</p>
+
+<div class="code">
+let age = 17;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);
+</div>
+
+<div class="task">
+Task: Check if marks are above 50 then pass otherwise fail.
+</div>
+
+
+<h2>7. If Statement</h2>
+
+<div class="code">
+let age = 18;
+
+if(age >= 18){
+console.log("You can vote");
+}
+</div>
+
+
+<h2>8. If Else</h2>
+
+<div class="code">
+let password = "1234";
+
+if(password === "1234"){
+console.log("Login successful");
+}
+else{
+console.log("Wrong password");
+}
+</div>
+
+
+<h2>9. Else If</h2>
+
+<div class="code">
+let marks = 75;
+
+if(marks >= 80){
+console.log("A grade");
+}
+else if(marks >= 60){
+console.log("B grade");
+}
+else{
+console.log("C grade");
+}
+</div>
+
+
+<h2>10. Switch Statement</h2>
+
+<div class="code">
+let day = 2;
+
+switch(day){
+
+case 1:
+console.log("Monday");
+break;
+
+case 2:
+console.log("Tuesday");
+break;
+
+default:
+console.log("Unknown day");
+
+}
+</div>
+
+<div class="task">
+Task: Create switch for months.
+</div>
 
 </div>
 
