@@ -1,247 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>JavaScript Operators Tutorial</title>
-
-<style>
-body{
-font-family: Arial, sans-serif;
-background:#f4f6f8;
-margin:0;
-padding:20px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-h1{
-text-align:center;
-color:#333;
-}
-
-h2{
-color:#2c7be5;
-margin-top:25px;
-}
-
-.code{
-background:#272822;
-color:#f8f8f2;
-padding:10px;
-border-radius:6px;
-margin-top:8px;
-font-family:monospace;
-}
-
-.task{
-background:#eaf7ff;
-padding:10px;
-border-left:4px solid #2c7be5;
-margin-top:10px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
+<body>
+    ```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Assignment</title>
+</head>
 <body>
 
-<div class="container">
+<h1>JavaScript Assignment</h1>
 
-<h1>JavaScript Operators and Conditions</h1>
-<p>Simple explanation for beginners.</p>
+<script>
 
-<h2>1. Arithmetic Operators</h2>
-<p>Used for math.</p>
+/* =========================
+1. Arithmetic Operators
+========================= */
 
-<p>Operators: +  -  *  /  %</p>
+// 1. Total price of items in cart
+let item1 = 20;
+let item2 = 35;
+let item3 = 15;
+let totalPrice = item1 + item2 + item3;
+document.write("1. Total Cart Price: $" + totalPrice + "<br><br>");
 
-<div class="code">
+
+// 2. Discounted price (10%)
 let price = 100;
-let tax = 20;
-let total = price + tax;
-
-console.log(total);
-</div>
-
-<p>Example: Shopping bill.</p>
-
-<div class="task">
-Task: Create two numbers and multiply them.
-</div>
+let discount = price * 0.10;
+let finalPrice = price - discount;
+document.write("2. Price after 10% discount: $" + finalPrice + "<br><br>");
 
 
-<h2>2. Assignment Operators</h2>
-<p>Used to store values.</p>
-
-<p>=  +=  -=</p>
-
-<div class="code">
-let score = 10;
-
-score += 5;
-
-console.log(score);
-</div>
-
-<p>Result becomes 15.</p>
-
-<div class="task">
-Task: Create a variable called money and add 50 to it.
-</div>
+// 3. Total bill including 18% tax
+let bill = 200;
+let tax = bill * 0.18;
+let totalBill = bill + tax;
+document.write("3. Total Bill with 18% tax: $" + totalBill + "<br><br>");
 
 
-<h2>3. Comparison Operators</h2>
-<p>Used to compare values.</p>
-
-<p>==  ===  !=  >  <  >=  <=</p>
-
-<h3>Difference between == and ===</h3>
-
-<p>== checks value only.</p>
-<p>=== checks value and type.</p>
-
-<div class="code">
-console.log(5 == "5"); 
-true
-
-console.log(5 === "5");
-false
-</div>
-
-<div class="task">
-Task: Compare 10 and "10" using == and ===.
-</div>
+// 4. BMI Calculator
+let weight = 65; 
+let height = 1.7;
+let bmi = weight / (height ** 2);
+document.write("4. BMI: " + bmi.toFixed(2) + "<br><br>");
 
 
-<h2>4. Logical Operators</h2>
-<p>Used for multiple conditions.</p>
+// 5. Monthly salary after tax deduction
+let salary = 3000;
+let salaryTax = salary * 0.15;
+let netSalary = salary - salaryTax;
+document.write("5. Salary after tax: $" + netSalary + "<br><br>");
 
-<p>&& AND</p>
-<p>|| OR</p>
-<p>! NOT</p>
 
-<div class="code">
-let age = 20;
+// 6. Average rating from 5 users
+let r1 = 4, r2 = 5, r3 = 3, r4 = 4, r5 = 5;
+let averageRating = (r1 + r2 + r3 + r4 + r5) / 5;
+document.write("6. Average Rating: " + averageRating + "<br><br>");
 
-if(age > 18 && age < 30){
-console.log("Young adult");
+
+// 7. Delivery charge calculator
+let orderAmount = 60;
+let deliveryCharge = 0;
+
+if(orderAmount < 50){
+deliveryCharge = 10;
+}else{
+deliveryCharge = 0;
 }
-</div>
 
-<div class="task">
-Task: Check if number is greater than 10 AND less than 50.
-</div>
+document.write("7. Delivery Charge: $" + deliveryCharge + "<br><br>");
 
 
-<h2>5. Unary Operators</h2>
-<p>Works with one value.</p>
+// 8. Simple Interest Calculator
+let principal = 1000;
+let rate = 5;
+let time = 2;
 
-<p>++ increase</p>
-<p>-- decrease</p>
-
-<div class="code">
-let likes = 5;
-
-likes++;
-
-console.log(likes);
-</div>
-
-<div class="task">
-Task: Create a variable and increase it using ++.
-</div>
+let simpleInterest = (principal * rate * time) / 100;
+document.write("8. Simple Interest: $" + simpleInterest + "<br><br>");
 
 
-<h2>6. Ternary Operator</h2>
-<p>Short version of if else.</p>
+// 9. Remaining balance after withdrawal
+let balance = 500;
+let withdraw = 150;
+let remaining = balance - withdraw;
 
-<div class="code">
-let age = 17;
-
-let result = age >= 18 ? "Adult" : "Minor";
-
-console.log(result);
-</div>
-
-<div class="task">
-Task: Check if marks are above 50 then pass otherwise fail.
-</div>
+document.write("9. Remaining Balance: $" + remaining + "<br><br>");
 
 
-<h2>7. If Statement</h2>
+// 10. Minutes to hours converter
+let minutes = 130;
+let hours = Math.floor(minutes / 60);
+let remainingMinutes = minutes % 60;
 
-<div class="code">
-let age = 18;
-
-if(age >= 18){
-console.log("You can vote");
-}
-</div>
+document.write("10. Time: " + hours + " hours " + remainingMinutes + " minutes<br><br>");
 
 
-<h2>8. If Else</h2>
 
-<div class="code">
+/* =========================
+3. If-Else Statements
+========================= */
+
+// 1. Login system
+let username = "admin";
 let password = "1234";
 
-if(password === "1234"){
-console.log("Login successful");
+if(username === "admin" && password === "1234"){
+document.write("Login Successful<br><br>");
+}else{
+document.write("Login Failed<br><br>");
 }
-else{
-console.log("Wrong password");
+
+
+// 2. Age restriction check
+let age = 16;
+
+if(age >= 18){
+document.write("Access Allowed<br><br>");
+}else{
+document.write("Access Denied - Under 18<br><br>");
 }
-</div>
 
 
-<h2>9. Else If</h2>
+// 3. Discount system
+let order = 220;
+let discountRate = 0;
 
-<div class="code">
+if(order > 200){
+discountRate = 0.20;
+}else if(order > 100){
+discountRate = 0.10;
+}else{
+discountRate = 0;
+}
+
+let discountAmount = order * discountRate;
+let finalOrderPrice = order - discountAmount;
+
+document.write("Final Price after Discount: $" + finalOrderPrice + "<br><br>");
+
+
+// 4. Student grade system
 let marks = 75;
 
 if(marks >= 80){
-console.log("A grade");
+document.write("Grade: A<br><br>");
+}else if(marks >= 60){
+document.write("Grade: B<br><br>");
+}else if(marks >= 40){
+document.write("Grade: C<br><br>");
+}else{
+document.write("Fail<br><br>");
 }
-else if(marks >= 60){
-console.log("B grade");
+
+
+// 5. Weather advisory system
+let temperature = 35;
+
+if(temperature > 30){
+document.write("Weather: Very Hot - Stay Hydrated<br><br>");
+}else if(temperature > 20){
+document.write("Weather: Pleasant<br><br>");
+}else{
+document.write("Weather: Cold - Wear Warm Clothes<br><br>");
 }
-else{
-console.log("C grade");
-}
-</div>
 
+</script>
 
-<h2>10. Switch Statement</h2>
-
-<div class="code">
-let day = 2;
-
-switch(day){
-
-case 1:
-console.log("Monday");
-break;
-
-case 2:
-console.log("Tuesday");
-break;
-
-default:
-console.log("Unknown day");
-
-}
-</div>
-
-<div class="task">
-Task: Create switch for months.
-</div>
-
-</div>
+</body>
+</html>
+```
 
 </body>
 </html>
