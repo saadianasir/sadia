@@ -1,227 +1,210 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-<title>Grocery Bill Calculator</title>
-</head>
 
-<body>
-
-<h2>Grocery Bill Calculator</h2>
-
-<script>
-
-function calculateBill(){
-
-let items = prompt("Enter number of items");
-let total = 0;
-
-for(let i=1; i<=items; i++){
-
-let price = prompt("Enter price of item " + i);
-total = total + Number(price);
-
-}
-
-if(total > 5000){
-total = total - (total * 0.10);
-}
-
-document.write("Final Bill = " + total);
-
-}
-
-calculateBill();
-
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Student Result</title>
-</head>
-
-<body>
-
-<h2>Student Result System</h2>
-
-<script>
-
-function calculateGrade(avg){
-
-if(avg >= 80){
-return "A";
-}
-else if(avg >= 60){
-return "B";
-}
-else if(avg >= 40){
-return "C";
-}
-else{
-return "Fail";
-}
-
-}
-
-let name = prompt("Enter student name");
-let total = 0;
-
-for(let i=1; i<=5; i++){
-
-let marks = prompt("Enter marks of subject " + i);
-total = total + Number(marks);
-
-}
-
-let average = total / 5;
-let grade = calculateGrade(average);
-
-document.write("Name: " + name + "<br>");
-document.write("Total: " + total + "<br>");
-document.write("Average: " + average + "<br>");
-document.write("Grade: " + grade);
-
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>ATM System</title>
-</head>
-
-<body>
-
-<h2>ATM Withdrawal System</h2>
-
-<script>
-
-let balance = 10000;
-
-function withdrawMoney(amount){
-
-if(amount > balance){
-return "Insufficient Balance";
-}
-else{
-balance = balance - amount;
-return "Remaining Balance = " + balance;
-}
-
-}
-
-for(let i=1; i<=3; i++){
-
-let amount = prompt("Enter amount to withdraw");
-let result = withdrawMoney(Number(amount));
-
-document.write(result + "<br>");
-
-}
-
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Restaurant Order</title>
-</head>
-
-<body>
-
-<h2>Restaurant Order System</h2>
-
-<script>
-
-let burger = 500;
-let pizza = 1200;
-let drink = 200;
-
-function calculateOrder(item, qty){
-
-let total = 0;
-
-if(item == "burger"){
-total = burger * qty;
-}
-
-else if(item == "pizza"){
-total = pizza * qty;
-}
-
-else if(item == "drink"){
-total = drink * qty;
-}
-
-if(total > 2000){
-total = total - (total * 0.15);
-}
-
-return total;
-
-}
-
-let item = prompt("Enter item (burger/pizza/drink)");
-let qty = prompt("Enter quantity");
-
-let bill = calculateOrder(item, Number(qty));
-
-document.write("Final Bill = " + bill);
-
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Salary Calculator</title>
-</head>
-
-<body>
-
-<h2>Employee Salary Calculator</h2>
-
-<script>
-
-let rate = 500;
-
-function calculateSalary(hours){
-
-if(hours > 40){
-
-let overtime = hours - 40;
-return (40 * rate) + (overtime * rate * 1.5);
-
-}
-
-else{
-
-return hours * rate;
-
-}
-
-}
-
-for(let i=1; i<=3; i++){
-
-let name = prompt("Enter employee name");
-let hours = prompt("Enter hours worked");
-
-let salary = calculateSalary(Number(hours));
-
-document.write("Employee: " + name + "<br>");
-document.write("Salary: " + salary + "<br><br>");
-
-}
-
-</script>
-
-</body>
-</html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminary - Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#acadad",
+                      "background": "#f6f6f6",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#e7e8e8",
+                      "error-container": "#f74b6d",
+                      "tertiary": "#725800",
+                      "tertiary-container": "#ffc703",
+                      "surface-container-low": "#f0f1f1",
+                      "secondary-fixed-dim": "#d4d4d4",
+                      "on-tertiary": "#fff1d8",
+                      "inverse-surface": "#0c0f0f",
+                      "inverse-primary": "#8283ff",
+                      "secondary": "#5b5b5b",
+                      "primary-fixed": "#9596ff",
+                      "on-primary-fixed": "#000000",
+                      "error-dim": "#a70138",
+                      "on-error-container": "#510017",
+                      "surface-container-high": "#e1e3e3",
+                      "on-tertiary-container": "#584300",
+                      "secondary-fixed": "#e2e2e2",
+                      "primary": "#433cee",
+                      "on-primary-container": "#0f0080",
+                      "surface-dim": "#d3d5d5",
+                      "surface-tint": "#433cee",
+                      "primary-container": "#9596ff",
+                      "primary-dim": "#352ae2",
+                      "on-secondary": "#f3f3f3",
+                      "on-primary-fixed-variant": "#15009b",
+                      "on-background": "#2d2f2f",
+                      "on-tertiary-fixed": "#403000",
+                      "primary-fixed-dim": "#8586ff",
+                      "tertiary-fixed-dim": "#eeba00",
+                      "error": "#b41340",
+                      "on-surface": "#2d2f2f",
+                      "on-secondary-fixed": "#3f3f3f",
+                      "outline": "#767777",
+                      "on-tertiary-fixed-variant": "#634c00",
+                      "on-secondary-fixed-variant": "#5b5b5b",
+                      "surface": "#f6f6f6",
+                      "on-surface-variant": "#5a5c5c",
+                      "secondary-dim": "#4f4f4f",
+                      "on-primary": "#f4f1ff",
+                      "inverse-on-surface": "#9c9d9d",
+                      "on-error": "#ffefef",
+                      "surface-variant": "#dbdddd",
+                      "on-secondary-container": "#525252",
+                      "surface-container-highest": "#dbdddd",
+                      "tertiary-fixed": "#ffc703",
+                      "tertiary-dim": "#644c00",
+                      "surface-bright": "#f6f6f6",
+                      "secondary-container": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#f6f6f6]/80 dark:bg-[#1a1a1a]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#5551FF] dark:text-[#9596ff]">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tighter text-[#5551FF] font-headline">Luminary</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#5551FF] dark:text-[#9596ff]">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Editorial Section Header -->
+<section class="mb-12">
+<h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tight text-on-surface mb-4">Curated Discovery</h2>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Explore the intersection of architectural precision and digital serenity. A hand-picked selection of visual narratives for the modern eye.
+            </p>
+</section>
+<!-- Horizontal Scrollable Categories (Chips) -->
+<div class="flex gap-3 overflow-x-auto pb-8 no-scrollbar">
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-primary text-on-primary font-medium transition-transform hover:scale-105 active:scale-95">All Stories</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-medium hover:bg-surface-container-highest transition-colors">Architecture</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-medium hover:bg-surface-container-highest transition-colors">Minimalism</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-medium hover:bg-surface-container-highest transition-colors">Urban Pulse</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-medium hover:bg-surface-container-highest transition-colors">Nature's Grid</button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Hero Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[16/10] md:aspect-auto md:h-[500px]">
+<img alt="Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modernist glass skyscraper reflecting clear blue sky with sharp geometric angles and high contrast lighting architectural photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjQawgGMjBhrKYI18ylj5iu2lTgBu_2jRFDW9hRsfDnmzXxKDBtDMC6DOatO65eSL5Zc45_RC-hPNOi3MZUv30ImHCCq8PBG9bywEWjPE8IRVfg0rc2R0N8_qlko_JYenHcoNUfTig2oh0h8LTLUWV2wsJyPqRz-JuaMUocoHRLryi6zJ9D_r9GShnU1zUlmsXrJlXb6mROtCgjN4qqCjGzg79RyWtVb9QZqoPvBMh7pk9HZUc52_nFYY8id9J0J2uY-Hwqu8rCf4X"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-[0.6875rem] font-bold tracking-widest uppercase mb-4 w-fit">Featured Story</span>
+<h3 class="text-3xl md:text-4xl font-headline font-bold text-white mb-2 leading-tight">Structural Elegance: The Berlin Monoliths</h3>
+<p class="text-white/80 font-body text-sm md:text-base max-w-lg">Exploring how concrete and light dance in the heart of Germany's modernist movement.</p>
+</div>
+</div>
+<!-- Tall Secondary Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4] md:h-[500px]">
+<img alt="Minimal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist interior with soft natural light shadows on a clean white wall and a single sculptural chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw-k-whjnhb-Me5MC2F7UDupARoOLHJJbgTkCn7ezLeIGoCGnM7a2BFDrDy2O7WsML6sWUY9Y08Z9SegYPhPcnei--RAuWaI99JAuQPxz9NKwDuDlMU9s_DNAr8ULV59lywtatrGrelaud7f53ephqy3B_TskuRWNdRoj1GYYYZ6V7ijAKgrkKIilxDdWyjaTHsCWCx6SAme1qVXKU3j4ma4tvbprd3ONTKs-EPRTQxwEVuLqXC92NQQVsg9ZexsZ3SWY2BTs4y4Hj"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-headline font-bold text-white mb-1">Silence Speaks</h3>
+<p class="text-white/90 text-xs font-medium tracking-wide">The art of negative space.</p>
+</div>
+</div>
+<!-- Square Gallery Items -->
+<div class="md:col-span-4 group bg-surface-container-lowest p-6 rounded-xl transition-all hover:bg-surface-container-low">
+<div class="aspect-square overflow-hidden rounded-lg mb-4">
+<img alt="Urban" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Top down view of a colorful busy street crossing with yellow cabs and vibrant crosswalk paint in Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNaET0l8xeqR13piMLahEeq7hGdHThkiIE95f8wLis546t42rJ6Kh9Mg5P0kt6vQFkjqyc_ar2ytVpv3DRk5OZKVbg6ZHEko_-2pwi4vz6wNXDer_ADj4wJasdGXh6Y-ZfjVhk5MSxUfO5G6VKlm17oC4W_JHARxW2V8zlAZn7JbeuCUsmXeQS_vWan-oMX6j0KurKXs9hNW1LzkTCJCqihddOwgMo41aWIMSoGxJO6PkgDNHjN7reC_bVymRgLx08Ppvpe1EKrWc"/>
+</div>
+<h4 class="text-lg font-headline font-semibold text-on-surface">Neon Rhythms</h4>
+<p class="text-sm text-on-surface-variant font-body mt-1">Urban movement captured in high saturation.</p>
+</div>
+<div class="md:col-span-4 group bg-surface-container-lowest p-6 rounded-xl transition-all hover:bg-surface-container-low">
+<div class="aspect-square overflow-hidden rounded-lg mb-4">
+<img alt="Nature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Macro shot of a vibrant green fern leaf with intricate patterns and soft morning dew drops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD044PD6gcBlwCgz3hYWF-oiUyYIpoTEhU_dZu7fb9BgqcEXllkG7p3yixlolxUdW1L1xDSqp0iaMM-kSXRk4Qm257MJ7vLOkRXOeDNmXC6JRB4R_kJgb2aGV15VCzrNxOjor-fOdTi6ZENgs2KUpinLUh96kzDo_HsPyM2vmR8-KPOLKyn_GoYZ_bqVfshEcfhKqtyHqfoy-w2T_3AP9vpRy4sZOTV6fTWdUDw26j7Id7Ny1EoKVvA6uc0uqdJFknxwGWWnDBC3x9t"/>
+</div>
+<h4 class="text-lg font-headline font-semibold text-on-surface">The Green Ratio</h4>
+<p class="text-sm text-on-surface-variant font-body mt-1">Mathematical perfection found in the forest.</p>
+</div>
+<div class="md:col-span-4 group bg-surface-container-lowest p-6 rounded-xl transition-all hover:bg-surface-container-low">
+<div class="aspect-square overflow-hidden rounded-lg mb-4">
+<img alt="Abstract" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract colorful wavy fluid textures with smooth transitions between deep violet and bright orange" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7NdYi3Vh52iU1ciOQd1t_Vfn-_r1TQeDUjDFA0vWFTjuaQOGinWJeiZ6CwnI_yWkw34KGestbgWeksidshLsjhK0cOLNdMDwFlSfuojr8_CEd4jcGKvDo88T3nLwAd_Ty70pg07J8XSalPUFMjTBPVnCRBzF-oc9PvvlQHmMK5nIhxQ8vS5YYOzsVlHMv7nIoR0AAnTsqjToBdm2UjoS9rrfwMmr__5mxDF0tE2NsxF_RbrpOg_6rj67YPBbEDCg96coGCHP5XkMn"/>
+</div>
+<h4 class="text-lg font-headline font-semibold text-on-surface">Liquid Light</h4>
+<p class="text-sm text-on-surface-variant font-body mt-1">Digital gradients reimagined as physical art.</p>
+</div>
+</div>
+<!-- Featured Artist Spotlight -->
+<section class="mt-20 p-8 md:p-12 rounded-[2rem] bg-surface-container-low flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden flex-shrink-0 outline outline-8 outline-surface-container-lowest">
+<img alt="Artist" class="w-full h-full object-cover" data-alt="Professional portrait of a creative woman with a confident expression in a minimal studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsiNTm5Oq2CyGieS8JMg3q-Q8AV3bKhgB4eC7ID5thxYfwnFGYus-7yTkOpFpirlLS6yxlZ_mCY6M7sgKhUQu-PnLYbcbhrqOvGUDVj3YRxGFEkL-BuqRam-ct1doyyxx1TuyM55UuViIL49sA5Fe1rMSQ99mJphdrDQSoG5CpWVCc8BMYDW8DZbM5Fq_cuL1o035NbzkEofgEsx08Ycl5B4wwHgzZ7T_PB9lupmnJQ2JrfcqtcC5W7RQNZ-IXiWnYfZd2R_BW7YZ"/>
+</div>
+<div class="text-center md:text-left">
+<span class="text-primary font-bold text-sm tracking-widest uppercase block mb-2">Creator of the Month</span>
+<h3 class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-4">Elena Vostriva</h3>
+<p class="text-on-surface-variant font-body text-lg max-w-xl leading-relaxed mb-6">
+                    Based in Stockholm, Elena specializes in capturing the harsh geometric contrasts of Nordic architecture through a lens of soft, human warmth.
+                </p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-semibold hover:bg-primary-dim transition-colors shadow-lg shadow-primary/20">View Collection</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-[#ffffff]/90 dark:bg-[#121212]/90 backdrop-blur-xl shadow-[0px_-4px_20px_rgba(45,47,47,0.04)]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3 w-full">
+<!-- Feed -->
+<button class="flex flex-col items-center justify-center text-[#2d2f2f] dark:text-[#dbdddd] opacity-60 hover:scale-105 transition-transform active:scale-90 duration-150">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-inter text-[0.6875rem] font-medium">Feed</span>
+</button>
+<!-- Explore (ACTIVE) -->
+<button class="flex flex-col items-center justify-center text-[#5551FF] dark:text-[#9596ff] bg-[#f0f1f1] dark:bg-[#2d2d2d] rounded-full px-6 py-2 hover:scale-105 transition-transform active:scale-90 duration-150">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-inter text-[0.6875rem] font-medium">Explore</span>
+</button>
+<!-- Saved -->
+<button class="flex flex-col items-center justify-center text-[#2d2f2f] dark:text-[#dbdddd] opacity-60 hover:scale-105 transition-transform active:scale-90 duration-150">
+<span class="material-symbols-outlined mb-1">bookmark</span>
+<span class="font-inter text-[0.6875rem] font-medium">Saved</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center text-[#2d2f2f] dark:text-[#dbdddd] opacity-60 hover:scale-105 transition-transform active:scale-90 duration-150">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-inter text-[0.6875rem] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+<!-- FAB (Suppressed for Details, but visible on Explore) -->
+<button class="fixed right-6 bottom-28 w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>
